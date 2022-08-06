@@ -24,6 +24,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h3>Gonzalo</h3>
         <h3>API Status:</h3>
         {renderStatus(apiStatus)}
       </header>
