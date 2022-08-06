@@ -4,15 +4,15 @@ import Axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const ENDPOINT = process.env.REACT_APP_ENDPOINT;
 
-function App() {
+const App = () => {
   const [apiStatus, setApiStatus] = useState("");
 
   useEffect(() => {
     Axios({
       method: 'GET',
-      url: `${API_URL}/health`
+      url: `${ENDPOINT}/health`
     }).then((response) => {
       setApiStatus({ status: response.status, payload: response.data, error: null });
     }).catch((error) => {
@@ -31,7 +31,7 @@ function App() {
   );
 }
 
-function renderStatus(response) {
+const renderStatus = (response) => {
   if (!response) {
     return null;
   } else if (response.error) {
