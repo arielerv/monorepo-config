@@ -11,16 +11,16 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.0.4
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "api-02092020"
+        heroku_app_name: "projectup-server"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
       env:
-        HD_APP_BASE: "src/api"
+        HD_APP_BASE: "src/server"
     - name: Release Web Client
       uses: akhileshns/heroku-deploy@v3.0.4
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "web-client-02092020"
+        heroku_app_name: "projectup-client"
         heroku_email: ${{secrets.HEROKU_API_KEY}}
       env:
-        HD_APP_BASE: "src/web-client"
-        HD_REACT_APP_API_URL: "https://api-02092020.herokuapp.com"
+        HD_APP_BASE: "src/client"
+        HD_REACT_APP_ENDPOINT: "https://projectup-server.herokuapp.com"

@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "projectup-server",
   "version": "1.0.0",
   "description": "Express API",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
-  "author": "Gerald Haxhi",
+  "author": "Ariel Erviti",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
